@@ -12,7 +12,13 @@
     // Импорты required с required называется common js
     "esModuleInterop": true,
     // Импорты без *
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "ts-node": {
     "compilerOptions": {
