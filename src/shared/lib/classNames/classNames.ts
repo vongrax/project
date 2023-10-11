@@ -1,9 +1,9 @@
 type Modifiers = Record<string, boolean | string>
 
-export const classNames = (className: string, modifiers: Modifiers, array: string[]): string => {
+export const classNames = (className: string, modifiers: Modifiers = {}, array: string[] = []): string => {
     return [
         className,
-        ...array,
+        ...array.filter(Boolean),
         ...Object.entries(modifiers)
             // Фильтруем значения если true
             .filter(([key, value]) => Boolean(value))
