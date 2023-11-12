@@ -1,16 +1,21 @@
 import React, {FC} from 'react';
-import {Link} from "react-router-dom";
 import {classNames} from "shared/lib/classNames/classNames";
 import classes from "./Navbar.module.scss"
+import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
 
 export interface NavbarProps {
-    className?:string
+    className?: string
 }
-export const Navbar:FC<NavbarProps> = ({className}) => {
+
+export const Navbar: FC<NavbarProps> = (props) => {
+    const {className} = props
+
     return (
-        <div className={classNames(classes.Navbar, {},[className])}>
-            <Link to={'/'}>Main page</Link>
-            <Link to={'/about'}>About page</Link>
+        <div className={classNames(classes.navbar, [className])}>
+            <div className={classes.links}>
+                <AppLink theme={AppLinkTheme.SECONDARY} className={classes.mainLink} to={'/'}>Main page</AppLink>
+                <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>About page</AppLink>
+            </div>
         </div>
     );
 };

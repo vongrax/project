@@ -1,6 +1,6 @@
 type Modifiers = Record<string, boolean | string>
 
-export const classNames = (className: string, modifiers: Modifiers = {}, array: string[] = []): string => {
+export const classNames = (className: string, array: string[] = [],  modifiers: Modifiers = {}): string => {
     return [
         className,
         ...array.filter(Boolean),
@@ -8,6 +8,6 @@ export const classNames = (className: string, modifiers: Modifiers = {}, array: 
             // Фильтруем значения если true
             .filter(([key, value]) => Boolean(value))
             // Делаем отфильтрованный массив только ключей
-            .map(([key, value]) => key)
+            .map(([key]) => key)
     ].join(" ")
 }
