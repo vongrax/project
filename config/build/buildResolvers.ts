@@ -1,8 +1,8 @@
-import {ResolveOptions} from "webpack";
-import {BuildOptions} from "./types/config";
+import { ResolveOptions } from 'webpack';
+import { BuildOptions } from './types/config';
 
-export const buildResolvers = ({paths}: BuildOptions): ResolveOptions => {
-    const {src} = paths;
+export const buildResolvers = ({ paths }: BuildOptions): ResolveOptions => {
+    const { src } = paths;
 
     return {
         extensions: ['.tsx', '.ts', '.js'],
@@ -10,5 +10,5 @@ export const buildResolvers = ({paths}: BuildOptions): ResolveOptions => {
         modules: [src, 'node_modules'],
         mainFiles: ['index'],
         alias: {},
-    }
-}
+    };
+};
