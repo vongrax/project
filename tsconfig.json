@@ -24,5 +24,6 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "types": ["jest", "node"]
 }
