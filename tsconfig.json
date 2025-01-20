@@ -25,5 +25,5 @@
       "module": "CommonJS"
     }
   },
-  "types": ["jest", "node"]
+  "types": ["jest", "node"],
 }

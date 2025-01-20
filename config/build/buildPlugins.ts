@@ -20,7 +20,7 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions):
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new BundleAnalyzerPlugin({
-            openAnalyzer: false,
+            openAnalyzer: true,
         }),
     ];
 
